@@ -12,7 +12,10 @@ const app = express();
 //Middleware
 app.use(cors(
     {
-    origin: "http://localhost:5173", // your Vite frontend
+    origin: [
+      "https://gentle-duckanoo-71ba3c.netlify.app/",
+      "http://localhost:5173"
+    ],// your Vite frontend
     methods: ["GET", "POST"],
     credentials: true, // optional, but useful if you later use cookies or auth
   }
