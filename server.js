@@ -13,11 +13,12 @@ const app = express();
 app.use(cors(
     {
     origin: [
-      "https://gentle-duckanoo-71ba3c.netlify.app/",
+      "https://soccerversefrontend.netlify.app/",
       "http://localhost:5173"
     ],// your Vite frontend
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST",  "PUT", "DELETE"],
     credentials: true, // optional, but useful if you later use cookies or auth
+    allowedHeaders: ['Content-Type', 'Authorization']
   }
 ));
 app.use(express.json());
