@@ -13,6 +13,7 @@ router.post("/", async(req, res) => {
         const newContact = new Contact({name, email, message});
         await newContact.save();
         console.log("✅ New contact saved:", newContact);
+        res.status(200).json({ message: "Contact form submitted successfully" });
         res.json({success: true, message: "Contact saved successfully"});
     }catch(error){
         console.error("❌ Error saving contact:", error);

@@ -13,7 +13,7 @@ const app = express();
 app.use(cors(
     {
     origin: [
-      "https://soccerversefrontend.netlify.app/",
+      "https://soccerversefrontend.netlify.app",
       "http://localhost:5173"
     ],// your Vite frontend
     methods: ["GET", "POST",  "PUT", "DELETE"],
